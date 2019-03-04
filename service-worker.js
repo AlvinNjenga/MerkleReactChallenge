@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/MerkleReactChallenge/precache-manifest.a5a876b8f6fc9fe5ec80ae147e131a2f.js"
+  "/MerkleReactChallenge/precache-manifest.5e609d1b5fa8450b75cf34cf8f34d4bf.js"
 );
 
 workbox.clientsClaim();

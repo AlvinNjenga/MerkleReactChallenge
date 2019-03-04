@@ -4,19 +4,19 @@ self.__precacheManifest = [
     "url": "/MerkleReactChallenge/static/js/runtime~main.fe84d5b9.js"
   },
   {
-    "revision": "e655a33b47e340fd6357",
-    "url": "/MerkleReactChallenge/static/js/main.e655a33b.chunk.js"
+    "revision": "195de131df072e80397b",
+    "url": "/MerkleReactChallenge/static/js/main.195de131.chunk.js"
   },
   {
     "revision": "06e7f200aaaa326479ea",
     "url": "/MerkleReactChallenge/static/js/2.06e7f200.chunk.js"
   },
   {
-    "revision": "e655a33b47e340fd6357",
-    "url": "/MerkleReactChallenge/static/css/main.f1d04e4e.chunk.css"
+    "revision": "195de131df072e80397b",
+    "url": "/MerkleReactChallenge/static/css/main.d360b963.chunk.css"
   },
   {
-    "revision": "5cc1e48040d43c9a8646c52d0a429369",
+    "revision": "6c9482fe0cdda8fc0e531b99522a9443",
     "url": "/MerkleReactChallenge/index.html"
   }
 ];

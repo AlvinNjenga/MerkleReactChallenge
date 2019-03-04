@@ -147,7 +147,8 @@ class App extends Component {
 
   clearBasket = () => {
     this.setState({
-      items: []
+      items: [],
+      totalNo: 0
     })
   }
 

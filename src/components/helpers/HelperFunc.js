@@ -16,6 +16,6 @@ export function capitalFirstLetter(str) {
 
  export function pluraliseUnit(number, item) {
     return number > 1 ? ` - ${number} units of ${item}
-` : ` - ${number} unit of ${item};
+` : ` - ${number} unit of ${item}
 `
  }

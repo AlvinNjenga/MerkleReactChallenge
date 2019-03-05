@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ListItem = ({item, alterQuantity, deleteItem, value}) => {
+const ListItem = ({item, alterQuantity, value}) => {
 
     return(
         <div className="row ListItem">

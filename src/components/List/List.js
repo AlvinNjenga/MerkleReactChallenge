@@ -1,7 +1,7 @@
 import React from 'react';
 import ListItem from './ListItem';
 
-const List = ({items, alterQuantity, deleteItem}) => {
+const List = ({items, alterQuantity}) => {
     
     if(items.length >= 1){
         return(
@@ -10,7 +10,6 @@ const List = ({items, alterQuantity, deleteItem}) => {
                     key={Object.keys(item)[0]}
                     item={item} 
                     alterQuantity={alterQuantity}
-                    deleteItem={deleteItem}
                     value={Object.keys(item)[0]}/>
             })
         )

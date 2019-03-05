@@ -32,7 +32,7 @@ class App extends Component {
   // and if not, it creates a new item object.
   addItem = (e, input) => {
     e.preventDefault();
-    if(!input){ return; }
+    if(!input){ return; };
 
     let { items, totalNo } = this.state;
     let capitalInput = capitalFirstLetter(input);
@@ -57,7 +57,7 @@ class App extends Component {
         {[capitalInput]: 1},
       ],
       totalNo: totalNo + 1
-    })
+    });
   }
 
   // Dependent on what the value of alter is, it will either increment or decrement the value of the item
@@ -142,7 +142,7 @@ class App extends Component {
           orderPlaced: false
         })
       }
-    }, 1000)
+    }, 1500)
   }
 
   clearBasket = () => {

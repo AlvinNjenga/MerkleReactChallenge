@@ -14,7 +14,7 @@ Functions are defined in App.js because they affect the state of the application
 
 The input component recieves as props the function addItem. addItem takes two variables, e which is an event, and the user input from a form. e.preventDefault() is used to stop the form on submitting from reloading the entire page, and there is validation that an input has been passed.
 
-That value is passed through a helper function (defined in the helpfully named helpers folder. I know, creative right?) which takes in a string and returns the first letter capitalised with every other letter lower case. This enabled me to avoid the shopping cart being case sensitive, as previously "bread" and "Bread" would appear as seperate items. 
+That value is passed through a helper function (defined in the helpfully named helpers folder. I know, creative right?) which takes in a string and returns the first letter capitalised with every other letter lower case. This enabled me to avoid the shopping cart being case sensitive, as previously "bread" and "Bread" would appear as seperate items. I also thought the list looked better with consistent capitalisation - personal preference.
 
 The current state of items is copied and a for loop is ran on that cloned array, to see if the user input value matches an already existing item in the shopping cart. If it does, the amount of that item in the cloned array is incremented. That cloned state is then set as state. 
 
@@ -28,11 +28,13 @@ BasketTotal simply displays the current total of items in the cart, and is passe
 
 List renders either two things based on the state of its parent - if there are no items in the cart, it returns a message telling the user to add items to their cart. If there is at least one item, it maps over each one, returning a component called ListItem.
 
-I used the lifecycle hook componentDidMount to set the correct total number of items on load if the app is loaded with items already in state. This could be tweaked to be called after an update in the case of fetching an array over an API call.
+I used the lifecycle hook componentDidMount to set the correct total number of items on load if the app is loaded with items already in state. This could be tweaked to be called after an update in the case of fetching an array over an API call. 
 
 ## Users can remove, increase or decrease quantity of an item in the cart.
 
-ListItem is passed the alterQuantity function (which used to be three functions but suffered from a lot of code repitition to destructure and clone the items array, as well as more props being passed). This function is passed the value of the item (it's key or "name") as well as how to alter it. The three options essentially have the functions loop over the item array, selecting only the item in question to either increment, decrement or completely remove from the array. 
+ListItem is passed the alterQuantity function (which used to be three functions but suffered from a lot of code repitition to destructure and clone the items array, as well as more props being passed). This function is passed the value of the item (it's key or "name") as well as how to alter it. The three options essentially have the functions loop over the item array, affecting only the item in question to either increment, decrement or completely remove from the array.
+
+If the number is decreased below 1, the item then is completely removed from the cart as the user would expect. Whenever an item is removed from the array, totalNo is decreased by 1. 
 
 To avoid having to manually remove every item in the case of clearing the entire cart, I added a button and a function that would simply set the items array in state to an empty array, and reset the total number to 0.
 
